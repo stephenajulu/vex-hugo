@@ -1,134 +1,127 @@
-baseurl = "https://www.example.com/"
-languageCode = "en"
-title = "VEX Bootstrap 4 Product Landing Page"
+################################### Default Configuration ############################
+baseurl = "http://demo.themefisher.com/vex-hugo/"
+title = "Vex | hugo landing page template"
 theme = "vex-hugo"
+# post excert
+summarylength = "20"
+# google analytics
+googleAnalytics = "" # Ex: UA-123-45
+# disable language
+disableLanguages = [] # desable language from here
 
+#################################### Plugins ##########################################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700"
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themefisher-font/themefisher-font.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.min.css"
+[[params.plugins.css]]
+link = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js"
+
+
+###################################### Navigation ######################################
+
+# homepage section menu
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+# main menu
+[[menu.main]]
+name = "Products"
+URL = "products"
+weight = 2
+
+# main menu
+[[menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 3
+
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 4
+
+# footer menu
+[[menu.footer]]
+name = "Blog"
+URL = "blog"
+weight = 1
+
+[[menu.footer]]
+name = "Contact"
+URL = "contact"
+weight = 2
+
+[[menu.footer]]
+name = "Terms & Conditions"
+URL = "terms-conditions"
+weight = 3
+
+[[menu.footer]]
+name = "Privacy Policy"
+URL = "privacy-policy"
+weight = 4
+
+
+########################### Default parameters ##########################
 [params]
-  description = ""
+logo = "images/logo.png"
+logo_width = "100px"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# currency
+currency = "$"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# snipcart public api key
+snipcart_api = "ZDgxY2ZiM2EtMWRmMi00M2ZkLWI1MDAtNzA2MDc0Y2Q1MzJlNjM3MTAzNDIwOTQ1NDA4NjM4"
 
-  # Put your custom stylesheets and scripts
-  custom_stylesheets = []
-  custom_scripts = []
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
 
-  # Additional meta
-  [[params.meta]]
-    name = ""
-    description = ""
+# Subscription
+[params.subscription]
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
 
-  # Navigation bar informations
-  [params.navbar]
-    logo = "Vex"
-    [[params.navbar.menu]]
-      link = "#"
-      text = "HOME"
-    [[params.navbar.menu]]
-      link = "#feature"
-      text = "Features"
-    [[params.navbar.menu]]
-      link = "#gallery"
-      text = "Gallery"
-    [[params.navbar.menu]]
-      link = "#testimonial"
-      text = "Testimonial"
 
-  # Header
-  [params.header]
-    title = "Believe in Technology, Make the change"
-    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, modi fugit in veritatis labore perferendis. Minima hic at, nostrum nihil!"
-    [params.header.image]
-      path = "images/watch.png"
-      alt = "Watch"
-    [params.header.button]
-      link = "#"
-      text = "Buy Now With $199"
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
 
-  # Features
-  [params.features]
-    title = "Our Core Features"
-    [params.features.image]
-      path = "images/watch-2.png"
-      alt = "Watch"
-    # Menu at the left of the image
-    [[params.features.left]]
-      icon = "tf-ion-ios-alarm-outline"
-      title = "Smooth Touch"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-    [[params.features.left]]
-      icon = "tf-ion-ios-bell-outline"
-      title = "Elegant Design"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-    [[params.features.left]]
-      icon = "tf-ion-ios-cart-outline"
-      title = "Easy Pricing"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-    # Menu at the right of the image
-    [[params.features.right]]
-      icon = "tf-ion-ios-alarm-outline"
-      title = "Smooth Touch"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-    [[params.features.right]]
-      icon = "tf-ion-ios-bell-outline"
-      title = "Elegant Design"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-    [[params.features.right]]
-      icon = "tf-ion-ios-cart-outline"
-      title = "Easy Pricing"
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
 
-  [params.promo]
-    title = "Designed by professional , the benefit for creative gigs"
-    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.  \nLorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum."
-    [params.promo.image]
-      path = "images/watch.png"
-      alt = "Watch"
-
-  [params.feature_list]
-    title = "Why Choose Apple Watch"
-    [[params.feature_list.items]]
-      image = "images/showcase/showcase-4.png"
-      title = "Lorem ipsum dolor sit amet."
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit quas, quo harum deserunt consequatur cumque!"
-      button_link = ""
-      button_text = "Check Features"
-    [[params.feature_list.items]]
-      image = "images/showcase/showcase-3.png"
-      title = "Lorem ipsum dolor sit amet."
-      text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit quas, quo harum deserunt consequatur cumque!"
-      button_link = ""
-      button_text = "Check Features"
-
-  [params.gallery]
-    title = "Checkout some amazing Shorts"
-    # Set the image directory to use as base
-    directory = "images/showcase"
-    # Set the images to show in the gallery
-    images = ["showcase-1.png", "showcase-2.png", "showcase-3.png", "showcase-4.png", "showcase-5.png", "showcase-6.png", "showcase-7.png", "showcase-8.png"]
-
-  [params.call_to_action]
-    title = "Get Product Updates"
-    text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
-    placeholder = "Your Email Address Here"
-    button_text = "Subscribe"
-
-  [params.testimonials]
-    title = "Watch Review"
-    [[params.testimonials.blocks]]
-      text = "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-      name = "Jonathon Andrew"
-      position = "CEO, Themefisher"
-      image = "images/avater.png"
-    [[params.testimonials.blocks]]
-      text = "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-      name = "Jonathon Andrew"
-      position = "CEO, Themefisher"
-      image = "images/avater.png"
-    [[params.testimonials.blocks]]
-      text = "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-      name = "Jonathon Andrew"
-      position = "CEO, Themefisher"
-      image = "images/avater.png"
-    [params.testimonials.button]
-      link = ""
-      text = "Grab You Product Now"
-
-  # Footer uses navbar data
+################################### French language #####################################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+# copyright
+copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"
